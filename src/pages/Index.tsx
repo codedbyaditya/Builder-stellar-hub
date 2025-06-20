@@ -8,6 +8,7 @@ import ExperienceSection from "@/components/portfolio/ExperienceSection";
 import LeadershipSection from "@/components/portfolio/LeadershipSection";
 import SkillsSection from "@/components/portfolio/SkillsSection";
 import ContactSection from "@/components/portfolio/ContactSection";
+import ScrollToTop from "@/components/portfolio/ScrollToTop";
 import { Toaster } from "@/components/ui/sonner";
 
 const Portfolio = () => {
@@ -137,6 +138,9 @@ const Portfolio = () => {
             </div>
           </motion.footer>
         </main>
+
+        {/* Scroll to Top Button */}
+        <ScrollToTop />
 
         {/* Toast Notifications */}
         <Toaster />
