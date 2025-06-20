@@ -443,18 +443,18 @@ const LeadershipSection = () => {
                   className="relative group cursor-pointer"
                   onClick={() =>
                     setSelectedImage(
-                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.37.01-am-dc7150?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.35.50-am-075f9c?format=webp&width=800",
                     )
                   }
                 >
                   <img
-                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.37.01-am-dc7150?format=webp&width=800"
-                    alt="Cricket Stars Meet"
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.35.50-am-075f9c?format=webp&width=800"
+                    alt="Ganesh Utsav Celebration"
                     className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
                     <h4 className="text-white text-xl font-bold text-center">
-                      🏏 Cricket Stars Meet
+                      🎉 Ganesh Utsav
                     </h4>
                   </div>
                 </div>

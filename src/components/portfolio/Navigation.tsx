@@ -94,6 +94,7 @@ const Navigation = () => {
       icon: <Users className="h-4 w-4" />,
     },
     { id: "skills", label: "Skills", icon: <Code className="h-4 w-4" /> },
+    { id: "gallery", label: "Gallery", icon: <Users className="h-4 w-4" /> },
     { id: "contact", label: "Contact", icon: <Mail className="h-4 w-4" /> },
   ];
 
