@@ -52,7 +52,7 @@ const HeroSection = () => {
           >
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-electric-yellow-400 shadow-2xl animate-pulse-glow">
               <img
-                src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.53.37-am-ae18f2?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2F91dee6dff05e4edeb389ea8ac7a33180%2F3c4dff8a72304e0bab6339bcf78e61ce"
                 alt="Aditya Deshmukh"
                 className="w-full h-full object-cover"
               />
