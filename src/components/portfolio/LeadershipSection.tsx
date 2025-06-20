@@ -42,7 +42,7 @@ const leadershipData: LeadershipItem[] = [
       "Led team of 50+ volunteers",
     ],
     image:
-      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.39-am-5ed7b0?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.22.44-am-5e1846?format=webp&width=800",
   },
   {
     id: 2,
@@ -326,23 +326,23 @@ const LeadershipSection = () => {
                 📸 Memorable Moments
               </h3>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div
                   className="relative group cursor-pointer"
                   onClick={() =>
                     setSelectedImage(
-                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.10-am-ed77dc?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.19.43-am-a0f623?format=webp&width=800",
                     )
                   }
                 >
                   <img
-                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.10-am-ed77dc?format=webp&width=800"
-                    alt="College Cricket Team"
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.19.43-am-a0f623?format=webp&width=800"
+                    alt="Memorable Moments"
                     className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
                     <h4 className="text-white text-xl font-bold text-center">
-                      🏏 College Cricket Tournament
+                      📸 Memorable Moments
                     </h4>
                   </div>
                 </div>
@@ -351,18 +351,38 @@ const LeadershipSection = () => {
                   className="relative group cursor-pointer"
                   onClick={() =>
                     setSelectedImage(
-                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.29-am-d3c2f6?format=webp&width=800",
+                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.30.06-am-16b750?format=webp&width=800",
                     )
                   }
                 >
                   <img
-                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.29-am-d3c2f6?format=webp&width=800"
-                    alt="College Event"
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.30.06-am-16b750?format=webp&width=800"
+                    alt="Memorable Moments"
                     className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
                     <h4 className="text-white text-xl font-bold text-center">
-                      🎉 College Celebrations
+                      🎭 Cultural Events
+                    </h4>
+                  </div>
+                </div>
+
+                <div
+                  className="relative group cursor-pointer"
+                  onClick={() =>
+                    setSelectedImage(
+                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.37.01-am-dc7150?format=webp&width=800",
+                    )
+                  }
+                >
+                  <img
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.37.01-am-dc7150?format=webp&width=800"
+                    alt="Cricket Stars Meet"
+                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
+                    <h4 className="text-white text-xl font-bold text-center">
+                      🏏 Cricket Stars Meet
                     </h4>
                   </div>
                 </div>
