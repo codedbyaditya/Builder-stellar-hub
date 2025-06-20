@@ -41,7 +41,7 @@ const experienceData: ExperienceItem[] = [
     ],
     skills: ["React.js", "Node.js", "MongoDB", "Team Leadership"],
     image:
-      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.53.26-am-f3acf1?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.25.09-am-b5f207?format=webp&width=800",
   },
   {
     id: 2,
@@ -58,6 +58,8 @@ const experienceData: ExperienceItem[] = [
       "Personalized life guidance system",
     ],
     skills: ["NLP", "AI/ML", "Python", "Chatbot Development"],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.24.01-am-a74633?format=webp&width=800",
   },
   {
     id: 3,
@@ -74,6 +76,8 @@ const experienceData: ExperienceItem[] = [
       "Communication skills development",
     ],
     skills: ["Design Thinking", "Innovation", "Communication"],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.26.01-am-ac2779?format=webp&width=800",
   },
   {
     id: 4,

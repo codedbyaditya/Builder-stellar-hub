@@ -76,18 +76,37 @@ const leadershipData: LeadershipItem[] = [
   },
   {
     id: 4,
-    title: "Hospitality Executive",
-    organization: "Asmita (Sports Fest) & Aproksha (Tech Fest)",
+    title: "Hospitality Executive - Aproksha Tech Fest",
+    organization: "Aproksha (Tech Fest) - IIIT-A",
     duration: "2024",
     type: "leadership",
     description:
-      "Managed logistics and accommodation for participants from 21 IIITs, ensuring seamless coordination.",
+      "Managed logistics and accommodation for participants from 21 IIITs, ensuring seamless coordination for the annual tech fest.",
     achievements: [
       "Managed logistics for 21 IIITs",
       "Accommodation coordination",
       "Seamless event execution",
       "Inter-college relationship building",
     ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.20.44-am-5e1846?format=webp&width=800",
+  },
+  {
+    id: 9,
+    title: "Hospitality Executive - Asmita Sports Fest",
+    organization: "Asmita (Sports Fest) - IIIT-A",
+    duration: "2024",
+    type: "sports",
+    description:
+      "Managed logistics and stay for participants from 21 IIITs during the annual sports festival.",
+    achievements: [
+      "Coordinated sports events logistics",
+      "Managed participant accommodation",
+      "Ensured smooth sports fest operations",
+      "Built inter-college sports networks",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.21.58-am-380ad9?format=webp&width=800",
   },
   {
     id: 5,
@@ -108,20 +127,37 @@ const leadershipData: LeadershipItem[] = [
   },
   {
     id: 6,
+    title: "Effervescence 2024 - Team Member",
+    organization: "Effervescence - IIIT-A",
+    duration: "2024",
+    type: "cultural",
+    description:
+      "Active team member in organizing one of North India's largest college cultural and technical festivals.",
+    achievements: [
+      "Cultural and technical event coordination",
+      "Student engagement and participation",
+      "Festival logistics management",
+      "Inter-college collaboration",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.23.03-am-01cc8c?format=webp&width=800",
+  },
+  {
+    id: 10,
     title: "Cultural Events Organizer",
     organization: "IIIT-A Cultural Committee",
     duration: "2022-2025",
     type: "cultural",
     description:
-      "Lead organizer for major cultural celebrations including Ganpati Utsav, Dahi Handi, Holi, and traditional festivals.",
+      "Lead organizer for major cultural celebrations including Ganpati Utsav, Shivjayanti, and traditional festivals.",
     achievements: [
-      "Organized Ganpati Utsav",
-      "Dahi Handi event coordination",
-      "Holi and Rangpanchami celebrations",
-      "Shivjayanti and Gudi Padwa events",
+      "Organized Ganpati Utsav celebrations",
+      "Shivjayanti event coordination",
+      "Traditional festival management",
+      "Cultural heritage promotion",
     ],
     image:
-      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.53.37-am-ae18f2?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.35.26-am-307f5b?format=webp&width=800",
   },
   {
     id: 7,
