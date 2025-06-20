@@ -312,9 +312,9 @@ const ExperienceSection = () => {
 
                 <div className="mt-6 flex justify-center">
                   <img
-                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.53.37-am-ae18f2?format=webp&width=800"
-                    alt="NCC Training"
-                    className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.18.49-am-f3cd07?format=webp&width=800"
+                    alt="NCC Training Group"
+                    className="w-full max-w-md rounded-lg object-cover border-4 border-white shadow-lg"
                   />
                 </div>
               </div>
