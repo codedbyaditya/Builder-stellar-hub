@@ -162,18 +162,18 @@ const photos: Photo[] = [
   {
     id: 19,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.35.50-am-075f9c?format=webp&width=800",
-    title: "Chatrapati Shivaji Maharaj Jayanti",
-    category: "Cultural",
-    description: "Celebrating Chatrapati Shivaji Maharaj Jayanti",
+    title: "Cricket Stars Meet",
+    category: "Sports",
+    description:
+      "Special moment with Michel Santner and Daryl Smith at Taj Hotel",
     date: "2024",
   },
   {
     id: 20,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.37.01-am-dc7150?format=webp&width=800",
-    title: "Cricket Stars Meet",
-    category: "Sports",
-    description:
-      "Special moment with Michel Santner and Daryl Smith at Taj Hotel",
+    title: "Chatrapati Shivaji Maharaj Jayanti",
+    category: "Cultural",
+    description: "Celebrating Chatrapati Shivaji Maharaj Jayanti",
     date: "2024",
   },
   {
@@ -289,25 +289,78 @@ const PhotoGallery = () => {
       ref={ref}
       className="py-20 bg-gradient-to-br from-deep-blue-50 to-electric-yellow-50 dark:from-gray-900 dark:to-blue-900 relative overflow-hidden"
     >
-      {/* Animated Background Elements */}
+      {/* Advanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {/* Floating geometric shapes */}
+        {[...Array(15)].map((_, i) => (
           <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-electric-yellow-400 rounded-full opacity-20"
+            key={`circle-${i}`}
+            className="absolute w-3 h-3 bg-electric-yellow-400 rounded-full opacity-10"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.2, 0.5, 0.2],
-              scale: [1, 1.5, 1],
+              y: [0, -40, 0],
+              x: [0, Math.random() * 20 - 10, 0],
+              opacity: [0.1, 0.4, 0.1],
+              scale: [1, 1.8, 1],
+              rotate: [0, 180, 360],
             }}
             transition={{
-              duration: 4 + Math.random() * 2,
+              duration: 6 + Math.random() * 3,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: Math.random() * 3,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+
+        {/* Hexagonal patterns */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={`hex-${i}`}
+            className="absolute w-4 h-4 bg-deep-blue-400 opacity-5"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              clipPath:
+                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+            }}
+            animate={{
+              rotate: [0, 120, 240, 360],
+              scale: [0.8, 1.2, 0.8],
+              opacity: [0.05, 0.15, 0.05],
+            }}
+            transition={{
+              duration: 8 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 4,
+            }}
+          />
+        ))}
+
+        {/* Gradient orbs */}
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={`orb-${i}`}
+            className="absolute w-16 h-16 rounded-full opacity-10"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              background: `radial-gradient(circle, rgba(251, 191, 36, 0.3) 0%, rgba(37, 99, 235, 0.1) 70%, transparent 100%)`,
+              filter: "blur(8px)",
+            }}
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.1, 0.3, 0.1],
+              x: [0, Math.random() * 100 - 50, 0],
+              y: [0, Math.random() * 100 - 50, 0],
+            }}
+            transition={{
+              duration: 12 + Math.random() * 8,
+              repeat: Infinity,
+              delay: Math.random() * 5,
             }}
           />
         ))}
@@ -323,17 +376,50 @@ const PhotoGallery = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.8, rotateY: -90 }}
               animate={
-                isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+                isInView
+                  ? { opacity: 1, scale: 1, rotateY: 0 }
+                  : { opacity: 0, scale: 0.8, rotateY: -90 }
               }
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{
+                duration: 1.2,
+                delay: 0.2,
+                type: "spring",
+                stiffness: 100,
+                damping: 15,
+              }}
               className="flex items-center justify-center mb-6"
             >
-              <Camera className="h-12 w-12 text-electric-yellow-400 mr-4 animate-bounce" />
-              <h2 className="text-4xl md:text-6xl font-bold text-gradient">
+              <motion.div
+                animate={{
+                  rotate: [0, 10, -10, 0],
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <Camera className="h-12 w-12 text-electric-yellow-400 mr-4" />
+              </motion.div>
+              <motion.h2
+                className="text-4xl md:text-6xl font-bold text-gradient"
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                style={{
+                  backgroundSize: "200% 100%",
+                }}
+              >
                 📸 Life in Pictures
-              </h2>
+              </motion.h2>
             </motion.div>
 
             <motion.div
@@ -365,20 +451,51 @@ const PhotoGallery = () => {
             {categories.map((category, index) => (
               <motion.button
                 key={category}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{
+                  scale: 1.08,
+                  y: -3,
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
+                }}
                 whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 20, rotateX: -90 }}
                 animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                  isInView
+                    ? { opacity: 1, y: 0, rotateX: 0 }
+                    : { opacity: 0, y: 20, rotateX: -90 }
                 }
-                transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.9 + index * 0.1,
+                  type: "spring",
+                  stiffness: 150,
+                }}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 relative overflow-hidden ${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-deep-blue-600 to-electric-yellow-400 text-white shadow-lg animate-pulse-glow"
+                    ? "bg-gradient-to-r from-deep-blue-600 to-electric-yellow-400 text-white shadow-lg"
                     : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-md"
                 }`}
               >
+                {/* Ripple effect on active */}
+                {selectedCategory === category && (
+                  <motion.div
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      background:
+                        "radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)",
+                    }}
+                    animate={{
+                      scale: [0, 1.5],
+                      opacity: [0.7, 0],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "easeOut",
+                    }}
+                  />
+                )}
+                <span className="relative z-10">{category}</span>
                 {category}
               </motion.button>
             ))}
@@ -408,16 +525,35 @@ const PhotoGallery = () => {
                     stiffness: 100,
                   }}
                   whileHover={{
-                    scale: 1.03,
-                    rotateY: 5,
-                    z: 50,
+                    scale: 1.05,
+                    rotateY: 8,
+                    rotateX: 5,
+                    z: 100,
+                    boxShadow: "0 25px 50px rgba(0, 0, 0, 0.25)",
                   }}
                   onHoverStart={() => setHoveredPhoto(photo.id)}
                   onHoverEnd={() => setHoveredPhoto(null)}
                   className="group cursor-pointer"
                   onClick={() => setSelectedPhoto(photo)}
                 >
-                  <Card className="overflow-hidden h-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 animated-border">
+                  <Card className="overflow-hidden h-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-500 animated-border relative group">
+                    {/* Animated border effect */}
+                    <motion.div
+                      className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{
+                        background: `conic-gradient(from 0deg, transparent, rgba(251, 191, 36, 0.4), transparent, rgba(37, 99, 235, 0.4), transparent)`,
+                        padding: "2px",
+                        zIndex: -1,
+                      }}
+                      animate={{
+                        rotate: hoveredPhoto === photo.id ? 360 : 0,
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: hoveredPhoto === photo.id ? Infinity : 0,
+                        ease: "linear",
+                      }}
+                    />
                     <div className="relative aspect-square overflow-hidden">
                       <motion.img
                         src={photo.src}
