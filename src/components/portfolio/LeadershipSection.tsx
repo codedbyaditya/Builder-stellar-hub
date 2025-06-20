@@ -1,0 +1,411 @@
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Users,
+  Calendar,
+  Trophy,
+  Heart,
+  Star,
+  ChevronLeft,
+  ChevronRight,
+  X,
+} from "lucide-react";
+
+interface LeadershipItem {
+  id: number;
+  title: string;
+  organization: string;
+  duration: string;
+  type: "leadership" | "cultural" | "sports" | "social";
+  description: string;
+  achievements: string[];
+  image?: string;
+  gallery?: string[];
+}
+
+const leadershipData: LeadershipItem[] = [
+  {
+    id: 1,
+    title: "Security Head",
+    organization: "Effervescence – IIIT-A Fest",
+    duration: "2024-2025 (3rd Year)",
+    type: "leadership",
+    description:
+      "Leading security operations for one of the largest tech fests in North India, managing crowd control, event safety, and coordination.",
+    achievements: [
+      "Managed security for 10,000+ attendees",
+      "Coordinated with local authorities",
+      "Zero major security incidents",
+      "Led team of 50+ volunteers",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.39-am-5ed7b0?format=webp&width=800",
+  },
+  {
+    id: 2,
+    title: "Technical Executive",
+    organization: "Effervescence – IIIT-A Fest",
+    duration: "2023-2024 (2nd Year)",
+    type: "leadership",
+    description:
+      "Organized various cultural and technical sub-events, managed logistics, and participated in flashmob events.",
+    achievements: [
+      "Organized 15+ technical events",
+      "Managed event logistics",
+      "Flashmob participation",
+      "Student engagement initiatives",
+    ],
+  },
+  {
+    id: 3,
+    title: "Alumni Affairs Coordinator",
+    organization: "IIITA Alumni Affairs",
+    duration: "Aug–Oct 2024",
+    type: "leadership",
+    description:
+      "Organized GAM-24, the 25-year alumni meet-up, facilitating connections between current students and alumni.",
+    achievements: [
+      "Organized GAM-24 (25-year alumni meet)",
+      "Connected 500+ alumni with students",
+      "Event planning and coordination",
+      "Network building initiatives",
+    ],
+  },
+  {
+    id: 4,
+    title: "Hospitality Executive",
+    organization: "Asmita (Sports Fest) & Aproksha (Tech Fest)",
+    duration: "2024",
+    type: "leadership",
+    description:
+      "Managed logistics and accommodation for participants from 21 IIITs, ensuring seamless coordination.",
+    achievements: [
+      "Managed logistics for 21 IIITs",
+      "Accommodation coordination",
+      "Seamless event execution",
+      "Inter-college relationship building",
+    ],
+  },
+  {
+    id: 5,
+    title: "ECL Cricket Tournament Organizer",
+    organization: "IIIT-A Sports Committee",
+    duration: "2023-2024",
+    type: "sports",
+    description:
+      "Successfully conducted college cricket league with scheduling, umpiring, logistics, and prize distribution.",
+    achievements: [
+      "Organized complete cricket tournament",
+      "Managed scheduling and umpiring",
+      "Logistics coordination",
+      "Prize distribution ceremony",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.10-am-ed77dc?format=webp&width=800",
+  },
+  {
+    id: 6,
+    title: "Cultural Events Organizer",
+    organization: "IIIT-A Cultural Committee",
+    duration: "2022-2025",
+    type: "cultural",
+    description:
+      "Lead organizer for major cultural celebrations including Ganpati Utsav, Dahi Handi, Holi, and traditional festivals.",
+    achievements: [
+      "Organized Ganpati Utsav",
+      "Dahi Handi event coordination",
+      "Holi and Rangpanchami celebrations",
+      "Shivjayanti and Gudi Padwa events",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.53.37-am-ae18f2?format=webp&width=800",
+  },
+  {
+    id: 7,
+    title: "PRAYAAS Volunteer",
+    organization: "IIITA Social Service",
+    duration: "2022-Present",
+    type: "social",
+    description:
+      "Student volunteer teaching underprivileged students on weekends, contributing to educational development.",
+    achievements: [
+      "Weekend teaching sessions",
+      "Underprivileged student support",
+      "Educational development impact",
+      "Community service contribution",
+    ],
+  },
+  {
+    id: 8,
+    title: "Hostel & Mess Committee Member",
+    organization: "IIIT-A Student Affairs",
+    duration: "1st and 2nd Year",
+    type: "leadership",
+    description:
+      "Managed day-to-day mess feedback, food quality control, and hostel discipline maintenance.",
+    achievements: [
+      "Mess quality improvement",
+      "Student feedback management",
+      "Hostel discipline maintenance",
+      "Student welfare initiatives",
+    ],
+  },
+];
+
+const LeadershipSection = () => {
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const getIcon = (type: string) => {
+    switch (type) {
+      case "leadership":
+        return <Users className="h-5 w-5" />;
+      case "cultural":
+        return <Star className="h-5 w-5" />;
+      case "sports":
+        return <Trophy className="h-5 w-5" />;
+      case "social":
+        return <Heart className="h-5 w-5" />;
+      default:
+        return <Users className="h-5 w-5" />;
+    }
+  };
+
+  const getTypeColor = (type: string) => {
+    switch (type) {
+      case "leadership":
+        return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300";
+      case "cultural":
+        return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300";
+      case "sports":
+        return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300";
+      case "social":
+        return "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300";
+      default:
+        return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-300";
+    }
+  };
+
+  return (
+    <section
+      id="leadership"
+      ref={ref}
+      className="py-20 bg-white dark:bg-gray-900"
+    >
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto"
+        >
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl md:text-5xl font-bold text-gradient mb-4"
+            >
+              Leadership & Events
+            </motion.h2>
+            <motion.div
+              initial={{ width: 0 }}
+              animate={isInView ? { width: "100px" } : { width: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="h-1 bg-electric-yellow-400 mx-auto rounded-full"
+            />
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-3xl mx-auto"
+            >
+              From organizing major college festivals to leading social
+              initiatives, here's my journey in leadership and community
+              building.
+            </motion.p>
+          </div>
+
+          {/* Leadership Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {leadershipData.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                }
+                transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
+              >
+                <Card className="h-full card-hover bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900 overflow-hidden">
+                  {/* Image */}
+                  {item.image && (
+                    <div className="aspect-video overflow-hidden cursor-pointer">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onClick={() => setSelectedImage(item.image!)}
+                      />
+                    </div>
+                  )}
+
+                  <div className="p-6">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center space-x-2">
+                        {getIcon(item.type)}
+                        <Badge className={getTypeColor(item.type)}>
+                          {item.type.charAt(0).toUpperCase() +
+                            item.type.slice(1)}
+                        </Badge>
+                      </div>
+                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        <span className="text-xs">{item.duration}</span>
+                      </div>
+                    </div>
+
+                    {/* Title and Organization */}
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-md font-semibold text-deep-blue-600 dark:text-electric-yellow-400 mb-3">
+                      {item.organization}
+                    </p>
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+
+                    {/* Achievements */}
+                    <div>
+                      <h4 className="font-semibold text-gray-700 dark:text-gray-300 mb-2 text-sm">
+                        Key Achievements:
+                      </h4>
+                      <ul className="space-y-1">
+                        {item.achievements
+                          .slice(0, 3)
+                          .map((achievement, aIndex) => (
+                            <li
+                              key={aIndex}
+                              className="text-xs text-gray-600 dark:text-gray-400 flex items-start"
+                            >
+                              <span className="w-1.5 h-1.5 bg-electric-yellow-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                              {achievement}
+                            </li>
+                          ))}
+                        {item.achievements.length > 3 && (
+                          <li className="text-xs text-gray-500 dark:text-gray-500">
+                            +{item.achievements.length - 3} more achievements
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Special Highlight: Group Photos */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="mt-16"
+          >
+            <Card className="p-8 bg-gradient-to-r from-deep-blue-600 to-electric-yellow-400 text-white">
+              <h3 className="text-3xl font-bold text-center mb-8">
+                📸 Memorable Moments
+              </h3>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div
+                  className="relative group cursor-pointer"
+                  onClick={() =>
+                    setSelectedImage(
+                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.10-am-ed77dc?format=webp&width=800",
+                    )
+                  }
+                >
+                  <img
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.10-am-ed77dc?format=webp&width=800"
+                    alt="College Cricket Team"
+                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
+                    <h4 className="text-white text-xl font-bold text-center">
+                      🏏 College Cricket Tournament
+                    </h4>
+                  </div>
+                </div>
+
+                <div
+                  className="relative group cursor-pointer"
+                  onClick={() =>
+                    setSelectedImage(
+                      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.29-am-d3c2f6?format=webp&width=800",
+                    )
+                  }
+                >
+                  <img
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.29-am-d3c2f6?format=webp&width=800"
+                    alt="College Event"
+                    className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
+                    <h4 className="text-white text-xl font-bold text-center">
+                      🎉 College Celebrations
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <motion.div
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0.8 }}
+            className="relative max-w-4xl max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedImage}
+              alt="Enlarged view"
+              className="w-full h-full object-contain"
+            />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute top-4 right-4 bg-black bg-opacity-50 text-white hover:bg-opacity-70"
+              onClick={() => setSelectedImage(null)}
+            >
+              <X className="h-6 w-6" />
+            </Button>
+          </motion.div>
+        </motion.div>
+      )}
+    </section>
+  );
+};
+
+export default LeadershipSection;
