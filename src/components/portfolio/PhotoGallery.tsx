@@ -176,6 +176,86 @@ const photos: Photo[] = [
       "Special moment with Michel Santner and Daryl Smith at Taj Hotel",
     date: "2024",
   },
+  {
+    id: 21,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.00.48-am-4d6fb3?format=webp&width=800",
+    title: "Traditional Attire",
+    category: "Cultural",
+    description: "Proudly wearing traditional Marathi attire with turban",
+    date: "2024",
+  },
+  {
+    id: 22,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.01.28-am-ffcba8?format=webp&width=800",
+    title: "Evening Celebration",
+    category: "Events",
+    description: "Beautiful evening event with decorative lighting",
+    date: "2024",
+  },
+  {
+    id: 23,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.01.46-am-69f7b0?format=webp&width=800",
+    title: "Victory Moment",
+    category: "Life",
+    description: "Celebrating life with open arms and positive energy",
+    date: "2024",
+  },
+  {
+    id: 24,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.02.00-am-f6048d?format=webp&width=800",
+    title: "College Friends",
+    category: "Life",
+    description: "Memorable moments with close college friends",
+    date: "2024",
+  },
+  {
+    id: 25,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.02.39-am-765540?format=webp&width=800",
+    title: "Adventure Travel",
+    category: "Life",
+    description: "Mountain adventures, ATV rides, and travel experiences",
+    date: "2024",
+  },
+  {
+    id: 26,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.02.59-am-216233?format=webp&width=800",
+    title: "College Gathering",
+    category: "Events",
+    description: "Large college group gathering and networking event",
+    date: "2024",
+  },
+  {
+    id: 27,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.03.21-am-9bebd4?format=webp&width=800",
+    title: "Hostel Week Champion",
+    category: "Recognition",
+    description: "IIIT-A Hostel Week celebrations with championship trophies",
+    date: "2025",
+  },
+  {
+    id: 28,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.03.45-am-b64c3f?format=webp&width=800",
+    title: "Night Out with Friends",
+    category: "Life",
+    description: "Evening gathering with close college friends",
+    date: "2024",
+  },
+  {
+    id: 29,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.04.14-am-08ac71?format=webp&width=800",
+    title: "Team Unity",
+    category: "Life",
+    description: "Coordinated team photo showcasing friendship and unity",
+    date: "2024",
+  },
+  {
+    id: 30,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.04.41-am-f1c049?format=webp&width=800",
+    title: "Study Group",
+    category: "Academic",
+    description: "Academic collaboration and group study sessions",
+    date: "2024",
+  },
 ];
 
 const categories = [
@@ -269,9 +349,9 @@ const PhotoGallery = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
             >
-              Every picture tells a story. Here's my journey through leadership,
-              achievements, cultural celebrations, and memorable moments that
-              shaped who I am today.
+              A comprehensive visual documentation of my professional journey,
+              academic achievements, leadership experiences, and personal growth
+              throughout my career at IIIT-A and beyond.
             </motion.p>
           </div>
 
@@ -433,7 +513,7 @@ const PhotoGallery = () => {
                   whileHover={{ scale: 1.05 }}
                   className="text-center"
                 >
-                  <div className="text-4xl font-bold mb-2">20+</div>
+                  <div className="text-4xl font-bold mb-2">30+</div>
                   <div className="text-sm opacity-90">Total Memories</div>
                 </motion.div>
                 <motion.div

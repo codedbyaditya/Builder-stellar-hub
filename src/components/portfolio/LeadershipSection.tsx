@@ -453,9 +453,7 @@ const LeadershipSection = () => {
                     className="w-full h-64 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center">
-                    <h4 className="text-white text-xl font-bold text-center">
-                      🎉 Ganesh Utsav
-                    </h4>
+                    <h4 className="text-white text-xl font-bold text-center"></h4>
                   </div>
                 </div>
               </div>
