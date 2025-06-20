@@ -314,11 +314,16 @@ const ExperienceSection = () => {
                   </div>
                 </div>
 
-                <div className="mt-6 flex justify-center">
+                <div className="mt-6 grid md:grid-cols-2 gap-4 justify-center">
                   <img
                     src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.18.49-am-f3cd07?format=webp&width=800"
                     alt="NCC Training Group"
-                    className="w-full max-w-md rounded-lg object-cover border-4 border-white shadow-lg"
+                    className="w-full rounded-lg object-cover border-4 border-white shadow-lg"
+                  />
+                  <img
+                    src="https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.33.21-am-1281f7?format=webp&width=800"
+                    alt="NCC Dress Uniform"
+                    className="w-full rounded-lg object-cover border-4 border-white shadow-lg"
                   />
                 </div>
               </div>

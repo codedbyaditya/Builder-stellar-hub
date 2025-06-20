@@ -57,13 +57,25 @@ const achievements: Achievement[] = [
   },
   {
     id: 5,
+    title: "JEE Achievement",
+    description:
+      "Successfully qualified JEE examination with excellent score, demonstrating academic excellence in engineering entrance",
+    category: "Academic",
+    date: "2020",
+    icon: <Trophy className="h-6 w-6" />,
+    color: "from-purple-500 to-blue-600",
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.28.44-am-a597f1?format=webp&width=800",
+  },
+  {
+    id: 7,
     title: "GitaGPT Featured",
     description:
       "AI chatbot project featured in newspaper articles for innovation",
     category: "Innovation",
     date: "2024",
     icon: <Star className="h-6 w-6" />,
-    color: "from-purple-500 to-blue-600",
+    color: "from-orange-500 to-red-600",
   },
   {
     id: 6,

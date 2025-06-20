@@ -166,13 +166,15 @@ const leadershipData: LeadershipItem[] = [
     duration: "2022-Present",
     type: "social",
     description:
-      "Student volunteer teaching underprivileged students on weekends, contributing to educational development.",
+      "Student volunteer teaching underprivileged students on weekends, contributing to educational development and community service.",
     achievements: [
       "Weekend teaching sessions",
       "Underprivileged student support",
       "Educational development impact",
       "Community service contribution",
     ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.28.05-am-9ed753?format=webp&width=800",
   },
   {
     id: 8,
@@ -188,6 +190,40 @@ const leadershipData: LeadershipItem[] = [
       "Hostel discipline maintenance",
       "Student welfare initiatives",
     ],
+  },
+  {
+    id: 11,
+    title: "Event Organizer & Recognition",
+    organization: "Various Cultural Events",
+    duration: "2022-2025",
+    type: "cultural",
+    description:
+      "Organized multiple cultural and social events, received recognition from college administration.",
+    achievements: [
+      "Event planning and coordination",
+      "Cultural program management",
+      "Administrative recognition",
+      "Community engagement",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.31.02-am-55b517?format=webp&width=800",
+  },
+  {
+    id: 12,
+    title: "Adobe SDE Meet - Industry Connect",
+    organization: "Adobe Career Connect",
+    duration: "2024",
+    type: "leadership",
+    description:
+      "Connected with Adobe Software Development Engineers, gaining industry insights and professional networking.",
+    achievements: [
+      "Industry professional networking",
+      "Technical insights from Adobe SDEs",
+      "Career guidance and mentorship",
+      "Technology trends understanding",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.34.48-am-61eb91?format=webp&width=800",
   },
 ];
 
