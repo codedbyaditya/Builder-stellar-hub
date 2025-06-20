@@ -7,6 +7,7 @@ import EducationSection from "@/components/portfolio/EducationSection";
 import ExperienceSection from "@/components/portfolio/ExperienceSection";
 import LeadershipSection from "@/components/portfolio/LeadershipSection";
 import SkillsSection from "@/components/portfolio/SkillsSection";
+import AchievementShowcase from "@/components/portfolio/AchievementShowcase";
 import ContactSection from "@/components/portfolio/ContactSection";
 import ScrollToTop from "@/components/portfolio/ScrollToTop";
 import { Toaster } from "@/components/ui/sonner";
@@ -37,6 +38,9 @@ const Portfolio = () => {
 
           {/* Skills Section */}
           <SkillsSection />
+
+          {/* Achievement Showcase */}
+          <AchievementShowcase />
 
           {/* Contact Section */}
           <ContactSection />
