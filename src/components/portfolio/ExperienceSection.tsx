@@ -97,19 +97,19 @@ const experienceData: ExperienceItem[] = [
   },
   {
     id: 5,
-    title: "NEET Achievement",
+    title: "JEE Achievement",
     company: "Academic Excellence",
     duration: "2020",
     type: "achievement",
-    description: "Achieved outstanding results in NEET with 170/180 score.",
+    description: "Achieved outstanding result",
     highlights: [
-      "170/180 NEET Score",
+      "",
       "90 Percentile Achievement",
       "Academic Excellence Recognition",
     ],
     skills: ["Academic Excellence", "Problem Solving"],
     image:
-      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-3.52.58-am-84b763?format=webp&width=800",
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.28.44-am-a597f1?format=webp&width=800",
   },
 ];
 
