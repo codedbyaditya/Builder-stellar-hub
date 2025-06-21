@@ -164,8 +164,7 @@ const photos: Photo[] = [
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.35.50-am-075f9c?format=webp&width=800",
     title: "Cricket Stars Meet",
     category: "Sports",
-    description:
-      "Special moment with Michel Santner and Daryl Smith at Taj Hotel",
+    description: "Special moment with Michel Santner and Daryl Smith at Taj Hotel",
     date: "2024",
   },
   {
@@ -324,8 +323,7 @@ const PhotoGallery = () => {
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              clipPath:
-                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+              clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
             }}
             animate={{
               rotate: [0, 120, 240, 360],
@@ -349,7 +347,7 @@ const PhotoGallery = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               background: `radial-gradient(circle, rgba(251, 191, 36, 0.3) 0%, rgba(37, 99, 235, 0.1) 70%, transparent 100%)`,
-              filter: "blur(8px)",
+              filter: 'blur(8px)',
             }}
             animate={{
               scale: [1, 1.5, 1],
@@ -387,7 +385,7 @@ const PhotoGallery = () => {
                 delay: 0.2,
                 type: "spring",
                 stiffness: 100,
-                damping: 15,
+                damping: 15
               }}
               className="flex items-center justify-center mb-6"
             >
@@ -451,12 +449,7 @@ const PhotoGallery = () => {
             {categories.map((category, index) => (
               <motion.button
                 key={category}
-                whileHover={{
-                  scale: 1.08,
-                  y: -3,
-                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
-                }}
-                whileTap={{ scale: 0.95 }}
+                className="hover:scale-105 hover:translate-y-[-3px] hover:shadow-lg transition-all duration-300"
                 initial={{ opacity: 0, y: 20, rotateX: -90 }}
                 animate={
                   isInView
@@ -481,8 +474,7 @@ const PhotoGallery = () => {
                   <motion.div
                     className="absolute inset-0 rounded-full"
                     style={{
-                      background:
-                        "radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)",
+                      background: "radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)",
                     }}
                     animate={{
                       scale: [0, 1.5],
@@ -524,11 +516,7 @@ const PhotoGallery = () => {
                     type: "spring",
                     stiffness: 100,
                   }}
-                  whileHover={{
-                    scale: 1.05,
-                    rotateY: 8,
-                    rotateX: 5,
-                    z: 100,
+                  className="hover:scale-105 hover:translate-y-[-8px] transition-transform duration-300"
                     boxShadow: "0 25px 50px rgba(0, 0, 0, 0.25)",
                   }}
                   onHoverStart={() => setHoveredPhoto(photo.id)}
@@ -542,7 +530,7 @@ const PhotoGallery = () => {
                       className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       style={{
                         background: `conic-gradient(from 0deg, transparent, rgba(251, 191, 36, 0.4), transparent, rgba(37, 99, 235, 0.4), transparent)`,
-                        padding: "2px",
+                        padding: '2px',
                         zIndex: -1,
                       }}
                       animate={{

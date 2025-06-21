@@ -336,12 +336,7 @@ const LeadershipSection = () => {
                   stiffness: 100,
                   damping: 15,
                 }}
-                whileHover={{
-                  scale: 1.02,
-                  y: -5,
-                  transition: { duration: 0.3 },
-                }}
-                whileTap={{ scale: 0.98 }}
+                className="hover:translate-y-[-5px] transition-transform duration-300"
               >
                 <Card className="h-full card-hover bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900 overflow-hidden relative group">
                   {/* Simple border glow */}
@@ -365,13 +360,7 @@ const LeadershipSection = () => {
                         <div className="group-hover:scale-110 transition-transform duration-300">
                           {getIcon(item.type)}
                         </div>
-                        <motion.div
-                          whileHover={{
-                            scale: 1.05,
-                            y: -2,
-                          }}
-                          transition={{ duration: 0.2 }}
-                        >
+                        <div className="hover:scale-105 hover:translate-y-[-2px] transition-transform duration-200">
                           <Badge className={getTypeColor(item.type)}>
                             <motion.span
                               initial={{ opacity: 0, y: 10 }}
@@ -389,7 +378,7 @@ const LeadershipSection = () => {
                                 item.type.slice(1)}
                             </motion.span>
                           </Badge>
-                        </motion.div>
+                        </div>
                       </div>
                       <motion.div
                         className="flex items-center text-sm text-gray-500 dark:text-gray-400"
