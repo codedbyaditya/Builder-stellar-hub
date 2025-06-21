@@ -337,34 +337,15 @@ const LeadershipSection = () => {
                   damping: 15,
                 }}
                 whileHover={{
-                  scale: 1.03,
-                  y: -8,
-                  rotateY: 5,
+                  scale: 1.02,
+                  y: -5,
                   transition: { duration: 0.3 },
                 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Card className="h-full card-hover bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900 overflow-hidden relative group">
-                  {/* Animated border glow */}
-                  <motion.div
-                    className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100"
-                    style={{
-                      background: `linear-gradient(45deg,
-                        rgba(251, 191, 36, 0.3) 0%,
-                        rgba(37, 99, 235, 0.3) 50%,
-                        rgba(251, 191, 36, 0.3) 100%)`,
-                      backgroundSize: "200% 200%",
-                      zIndex: -1,
-                    }}
-                    animate={{
-                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                    }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                  />
+                  {/* Simple border glow */}
+                  <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300 bg-gradient-to-r from-electric-yellow-400/20 to-deep-blue-600/20 -z-10" />
                   {/* Image */}
                   {item.image && (
                     <div className="aspect-video overflow-hidden cursor-pointer">
@@ -381,19 +362,9 @@ const LeadershipSection = () => {
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-2">
-                        <motion.div
-                          animate={{
-                            rotate: [0, 5, -5, 0],
-                            scale: [1, 1.1, 1],
-                          }}
-                          transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            delay: index * 0.2,
-                          }}
-                        >
+                        <div className="group-hover:scale-110 transition-transform duration-300">
                           {getIcon(item.type)}
-                        </motion.div>
+                        </div>
                         <motion.div
                           whileHover={{
                             scale: 1.05,
@@ -434,19 +405,10 @@ const LeadershipSection = () => {
                         }}
                         whileHover={{
                           scale: 1.05,
-                          color: "rgb(251, 191, 36)",
                         }}
+                        className="hover:text-electric-yellow-500 transition-colors duration-300"
                       >
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{
-                            duration: 20,
-                            repeat: Infinity,
-                            ease: "linear",
-                          }}
-                        >
-                          <Calendar className="h-4 w-4 mr-1" />
-                        </motion.div>
+                        <Calendar className="h-4 w-4 mr-1 group-hover:rotate-12 transition-transform duration-300" />
                         <span className="text-xs font-medium">
                           {item.duration}
                         </span>
@@ -501,10 +463,7 @@ const LeadershipSection = () => {
                         duration: 0.6,
                         delay: 0.5 + index * 0.1,
                       }}
-                      whileHover={{
-                        color: "rgb(75, 85, 99)",
-                        transition: { duration: 0.2 },
-                      }}
+                      className="hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
                     >
                       {item.description}
                     </motion.p>
@@ -522,10 +481,7 @@ const LeadershipSection = () => {
                     >
                       <motion.h4
                         className="font-semibold text-gray-700 dark:text-gray-300 mb-2 text-sm"
-                        whileHover={{
-                          color: "rgb(251, 191, 36)",
-                          transition: { duration: 0.2 },
-                        }}
+                        className="hover:text-electric-yellow-500 transition-colors duration-300"
                       >
                         Key Achievements:
                       </motion.h4>
@@ -551,17 +507,7 @@ const LeadershipSection = () => {
                               }}
                               className="text-xs text-gray-600 dark:text-gray-400 flex items-start group/achievement"
                             >
-                              <motion.span
-                                className="w-1.5 h-1.5 bg-electric-yellow-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover/achievement:scale-125 transition-transform duration-200"
-                                animate={{
-                                  scale: [1, 1.2, 1],
-                                }}
-                                transition={{
-                                  duration: 2,
-                                  repeat: Infinity,
-                                  delay: aIndex * 0.3,
-                                }}
-                              />
+                              <span className="w-1.5 h-1.5 bg-electric-yellow-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover/achievement:scale-125 transition-transform duration-200" />
                               <span className="group-hover/achievement:text-gray-800 dark:group-hover/achievement:text-gray-200 transition-colors duration-200">
                                 {achievement}
                               </span>
