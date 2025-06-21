@@ -392,10 +392,7 @@ const LeadershipSection = () => {
                           duration: 0.5,
                           delay: 0.6 + index * 0.1,
                         }}
-                        whileHover={{
-                          scale: 1.05,
-                        }}
-                        className="hover:text-electric-yellow-500 transition-colors duration-300"
+                        className="hover:text-electric-yellow-500 transition-colors duration-300 hover:scale-105"
                       >
                         <Calendar className="h-4 w-4 mr-1 group-hover:rotate-12 transition-transform duration-300" />
                         <span className="text-xs font-medium">
@@ -468,10 +465,7 @@ const LeadershipSection = () => {
                         delay: 0.5 + index * 0.1,
                       }}
                     >
-                      <motion.h4
-                        className="font-semibold text-gray-700 dark:text-gray-300 mb-2 text-sm"
-                        className="hover:text-electric-yellow-500 transition-colors duration-300"
-                      >
+                      <motion.h4 className="font-semibold text-gray-700 dark:text-gray-300 mb-2 text-sm hover:text-electric-yellow-500 transition-colors duration-300">
                         Key Achievements:
                       </motion.h4>
                       <ul className="space-y-1">
