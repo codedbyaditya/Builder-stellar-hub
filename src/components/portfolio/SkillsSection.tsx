@@ -223,7 +223,7 @@ const SkillsSection = () => {
               <div className="h-1 w-20 bg-electric-yellow-400 mx-auto rounded-full" />
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* GitaGPT Project */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
