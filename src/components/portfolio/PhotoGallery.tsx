@@ -451,7 +451,6 @@ const PhotoGallery = () => {
             {categories.map((category, index) => (
               <motion.button
                 key={category}
-                className="hover:scale-105 hover:translate-y-[-3px] hover:shadow-lg transition-all duration-300"
                 initial={{ opacity: 0, y: 20, rotateX: -90 }}
                 animate={
                   isInView
@@ -465,7 +464,7 @@ const PhotoGallery = () => {
                   stiffness: 150,
                 }}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 relative overflow-hidden ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 relative overflow-hidden hover:scale-105 hover:translate-y-[-3px] hover:shadow-lg ${
                   selectedCategory === category
                     ? "bg-gradient-to-r from-deep-blue-600 to-electric-yellow-400 text-white shadow-lg"
                     : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 shadow-md"
