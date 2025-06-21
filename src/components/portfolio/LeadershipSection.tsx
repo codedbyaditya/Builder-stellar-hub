@@ -81,12 +81,12 @@ const leadershipData: LeadershipItem[] = [
     duration: "2024",
     type: "leadership",
     description:
-      "Managed logistics and accommodation for participants from 21 IIITs, ensuring seamless coordination for the annual tech fest.",
+      "Managed logistics and coordination for participants, ensuring seamless execution of the annual college tech fest.",
     achievements: [
-      "Managed logistics for 21 IIITs",
-      "Accommodation coordination",
-      "Seamless event execution",
-      "Inter-college relationship building",
+      "Event logistics management",
+      "Participant coordination",
+      "Seamless fest execution",
+      "Technical event organization",
     ],
     image:
       "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.20.44-am-5e1846?format=webp&width=800",
@@ -308,13 +308,63 @@ const LeadershipSection = () => {
             {leadershipData.map((item, index) => (
               <motion.div
                 key={item.id}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                  scale: 0.9,
+                  rotateX: -15,
+                }}
                 animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }
+                  isInView
+                    ? {
+                        opacity: 1,
+                        y: 0,
+                        scale: 1,
+                        rotateX: 0,
+                      }
+                    : {
+                        opacity: 0,
+                        y: 50,
+                        scale: 0.9,
+                        rotateX: -15,
+                      }
                 }
-                transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.3 + index * 0.1,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 15,
+                }}
+                whileHover={{
+                  scale: 1.03,
+                  y: -8,
+                  rotateY: 5,
+                  transition: { duration: 0.3 },
+                }}
+                whileTap={{ scale: 0.98 }}
               >
-                <Card className="h-full card-hover bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900 overflow-hidden">
+                <Card className="h-full card-hover bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900 overflow-hidden relative group">
+                  {/* Animated border glow */}
+                  <motion.div
+                    className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100"
+                    style={{
+                      background: `linear-gradient(45deg,
+                        rgba(251, 191, 36, 0.3) 0%,
+                        rgba(37, 99, 235, 0.3) 50%,
+                        rgba(251, 191, 36, 0.3) 100%)`,
+                      backgroundSize: "200% 200%",
+                      zIndex: -1,
+                    }}
+                    animate={{
+                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                  />
                   {/* Image */}
                   {item.image && (
                     <div className="aspect-video overflow-hidden cursor-pointer">
@@ -331,55 +381,207 @@ const LeadershipSection = () => {
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-2">
-                        {getIcon(item.type)}
-                        <Badge className={getTypeColor(item.type)}>
-                          {item.type.charAt(0).toUpperCase() +
-                            item.type.slice(1)}
-                        </Badge>
+                        <motion.div
+                          animate={{
+                            rotate: [0, 5, -5, 0],
+                            scale: [1, 1.1, 1],
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            delay: index * 0.2,
+                          }}
+                        >
+                          {getIcon(item.type)}
+                        </motion.div>
+                        <motion.div
+                          whileHover={{
+                            scale: 1.05,
+                            y: -2,
+                          }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <Badge className={getTypeColor(item.type)}>
+                            <motion.span
+                              initial={{ opacity: 0, y: 10 }}
+                              animate={
+                                isInView
+                                  ? { opacity: 1, y: 0 }
+                                  : { opacity: 0, y: 10 }
+                              }
+                              transition={{
+                                duration: 0.5,
+                                delay: 0.4 + index * 0.1,
+                              }}
+                            >
+                              {item.type.charAt(0).toUpperCase() +
+                                item.type.slice(1)}
+                            </motion.span>
+                          </Badge>
+                        </motion.div>
                       </div>
-                      <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        <span className="text-xs">{item.duration}</span>
-                      </div>
+                      <motion.div
+                        className="flex items-center text-sm text-gray-500 dark:text-gray-400"
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={
+                          isInView
+                            ? { opacity: 1, x: 0 }
+                            : { opacity: 0, x: 20 }
+                        }
+                        transition={{
+                          duration: 0.5,
+                          delay: 0.6 + index * 0.1,
+                        }}
+                        whileHover={{
+                          scale: 1.05,
+                          color: "rgb(251, 191, 36)",
+                        }}
+                      >
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{
+                            duration: 20,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
+                        >
+                          <Calendar className="h-4 w-4 mr-1" />
+                        </motion.div>
+                        <span className="text-xs font-medium">
+                          {item.duration}
+                        </span>
+                      </motion.div>
                     </div>
 
                     {/* Title and Organization */}
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                    <motion.h3
+                      className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-deep-blue-600 group-hover:to-electric-yellow-400 group-hover:bg-clip-text transition-all duration-300"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={
+                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                      }
+                      transition={{
+                        duration: 0.6,
+                        delay: 0.3 + index * 0.1,
+                      }}
+                      whileHover={{
+                        scale: 1.02,
+                        transition: { duration: 0.2 },
+                      }}
+                    >
                       {item.title}
-                    </h3>
-                    <p className="text-md font-semibold text-deep-blue-600 dark:text-electric-yellow-400 mb-3">
+                    </motion.h3>
+
+                    <motion.p
+                      className="text-md font-semibold text-deep-blue-600 dark:text-electric-yellow-400 mb-3"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                      }
+                      transition={{
+                        duration: 0.6,
+                        delay: 0.4 + index * 0.1,
+                      }}
+                      whileHover={{
+                        x: 5,
+                        transition: { duration: 0.2 },
+                      }}
+                    >
                       {item.organization}
-                    </p>
+                    </motion.p>
 
                     {/* Description */}
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                    <motion.p
+                      className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={
+                        isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
+                      }
+                      transition={{
+                        duration: 0.6,
+                        delay: 0.5 + index * 0.1,
+                      }}
+                      whileHover={{
+                        color: "rgb(75, 85, 99)",
+                        transition: { duration: 0.2 },
+                      }}
+                    >
                       {item.description}
-                    </p>
+                    </motion.p>
 
                     {/* Achievements */}
-                    <div>
-                      <h4 className="font-semibold text-gray-700 dark:text-gray-300 mb-2 text-sm">
+                    <motion.div
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                      }
+                      transition={{
+                        duration: 0.6,
+                        delay: 0.5 + index * 0.1,
+                      }}
+                    >
+                      <motion.h4
+                        className="font-semibold text-gray-700 dark:text-gray-300 mb-2 text-sm"
+                        whileHover={{
+                          color: "rgb(251, 191, 36)",
+                          transition: { duration: 0.2 },
+                        }}
+                      >
                         Key Achievements:
-                      </h4>
+                      </motion.h4>
                       <ul className="space-y-1">
                         {item.achievements
                           .slice(0, 3)
                           .map((achievement, aIndex) => (
-                            <li
+                            <motion.li
                               key={aIndex}
-                              className="text-xs text-gray-600 dark:text-gray-400 flex items-start"
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={
+                                isInView
+                                  ? { opacity: 1, x: 0 }
+                                  : { opacity: 0, x: -10 }
+                              }
+                              transition={{
+                                duration: 0.4,
+                                delay: 0.7 + index * 0.1 + aIndex * 0.05,
+                              }}
+                              whileHover={{
+                                x: 5,
+                                transition: { duration: 0.2 },
+                              }}
+                              className="text-xs text-gray-600 dark:text-gray-400 flex items-start group/achievement"
                             >
-                              <span className="w-1.5 h-1.5 bg-electric-yellow-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                              {achievement}
-                            </li>
+                              <motion.span
+                                className="w-1.5 h-1.5 bg-electric-yellow-400 rounded-full mt-1.5 mr-2 flex-shrink-0 group-hover/achievement:scale-125 transition-transform duration-200"
+                                animate={{
+                                  scale: [1, 1.2, 1],
+                                }}
+                                transition={{
+                                  duration: 2,
+                                  repeat: Infinity,
+                                  delay: aIndex * 0.3,
+                                }}
+                              />
+                              <span className="group-hover/achievement:text-gray-800 dark:group-hover/achievement:text-gray-200 transition-colors duration-200">
+                                {achievement}
+                              </span>
+                            </motion.li>
                           ))}
                         {item.achievements.length > 3 && (
-                          <li className="text-xs text-gray-500 dark:text-gray-500">
+                          <motion.li
+                            initial={{ opacity: 0 }}
+                            animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                            transition={{
+                              duration: 0.4,
+                              delay: 1 + index * 0.1,
+                            }}
+                            className="text-xs text-gray-500 dark:text-gray-500 italic"
+                          >
                             +{item.achievements.length - 3} more achievements
-                          </li>
+                          </motion.li>
                         )}
                       </ul>
-                    </div>
+                    </motion.div>
                   </div>
                 </Card>
               </motion.div>
