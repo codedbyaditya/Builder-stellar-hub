@@ -566,28 +566,23 @@ const PhotoGallery = () => {
                           </p>
                         </div>
 
-                        <motion.div
-                          className="absolute top-4 right-4"
-                          whileHover={{ scale: 1.2, rotate: 10 }}
-                        >
+                        <div className="absolute top-4 right-4 hover:scale-110 hover:rotate-6 transition-transform duration-200">
                           <ZoomIn className="h-6 w-6 text-white" />
-                        </motion.div>
+                        </div>
                       </motion.div>
 
                       {/* Floating Category Badge */}
-                      <motion.div
-                        className="absolute top-4 left-4"
-                        animate={
+                      <div
+                        className={`absolute top-4 left-4 transition-transform duration-200 ${
                           hoveredPhoto === photo.id
-                            ? { scale: 1.1, y: -5 }
-                            : { scale: 1, y: 0 }
-                        }
-                        transition={{ duration: 0.2 }}
+                            ? "scale-110 translate-y-[-5px]"
+                            : "scale-100"
+                        }`}
                       >
                         <Badge className="bg-electric-yellow-400 text-deep-blue-900 font-semibold">
                           {photo.category}
                         </Badge>
-                      </motion.div>
+                      </div>
 
                       {/* Love Animation */}
                       <motion.div
