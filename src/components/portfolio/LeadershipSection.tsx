@@ -381,7 +381,7 @@ const LeadershipSection = () => {
                         </div>
                       </div>
                       <motion.div
-                        className="flex items-center text-sm text-gray-500 dark:text-gray-400"
+                        className="flex items-center text-sm text-gray-500 dark:text-gray-400 hover:text-electric-yellow-500 transition-colors duration-300 hover:scale-105"
                         initial={{ opacity: 0, x: 20 }}
                         animate={
                           isInView
@@ -392,7 +392,6 @@ const LeadershipSection = () => {
                           duration: 0.5,
                           delay: 0.6 + index * 0.1,
                         }}
-                        className="hover:text-electric-yellow-500 transition-colors duration-300 hover:scale-105"
                       >
                         <Calendar className="h-4 w-4 mr-1 group-hover:rotate-12 transition-transform duration-300" />
                         <span className="text-xs font-medium">
@@ -440,7 +439,7 @@ const LeadershipSection = () => {
 
                     {/* Description */}
                     <motion.p
-                      className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed"
+                      className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
                       initial={{ opacity: 0, y: 10 }}
                       animate={
                         isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }
@@ -449,7 +448,6 @@ const LeadershipSection = () => {
                         duration: 0.6,
                         delay: 0.5 + index * 0.1,
                       }}
-                      className="hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300"
                     >
                       {item.description}
                     </motion.p>
