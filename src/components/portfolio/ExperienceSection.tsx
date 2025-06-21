@@ -62,6 +62,23 @@ const experienceData: ExperienceItem[] = [
       "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.24.01-am-a74633?format=webp&width=800",
   },
   {
+    id: 6,
+    title: "eVISION – Hybrid Learning Platform",
+    company: "Educational Technology Project",
+    duration: "Mar 2024 – Jun 2024",
+    type: "project",
+    description:
+      "An affordable hybrid (online + offline) education platform for Classes 5–10 & competitive exams (JEE, NEET, MHT-CET, NDA), supporting English, Hindi, and Marathi.",
+    highlights: [
+      "Designed UI in Figma focused on rural usability",
+      "Built responsive frontend in React.js",
+      "Integrated Firebase Auth & Google Drive API",
+      "Managed course-wise routing & material upload",
+      "Team Size: 4 | Status: Live",
+    ],
+    skills: ["React.js", "Node.js", "Firebase", "Figma", "Google Drive API"],
+  },
+  {
     id: 3,
     title: "Adobe Mentee",
     company: "Adobe",

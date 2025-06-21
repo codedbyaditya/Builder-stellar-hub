@@ -147,7 +147,7 @@ const AboutSection = () => {
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8"
               >
                 <Card className="p-4 text-center card-hover bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
-                  <AnimatedCounter value={3} label="Projects Completed" />
+                  <AnimatedCounter value={4} label="Projects Completed" />
                 </Card>
 
                 <Card className="p-4 text-center card-hover bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
