@@ -294,7 +294,7 @@ const SkillsSection = () => {
                 </Card>
               </motion.div>
 
-              {/* Bindisa Agritech Platform */}
+              {/* eVISION Platform */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={
@@ -304,61 +304,71 @@ const SkillsSection = () => {
                 }
                 transition={{ duration: 0.8, delay: 1.6 }}
               >
-                <Card className="card-hover bg-gradient-to-br from-white to-green-50 dark:from-gray-800 dark:to-green-900 overflow-hidden">
+                <Card className="card-hover bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-blue-900 overflow-hidden">
                   <div className="p-8">
                     <div className="flex items-center space-x-3 mb-4">
-                      <Zap className="h-8 w-8 text-green-600" />
+                      <Zap className="h-8 w-8 text-blue-600" />
                       <h4 className="text-2xl font-bold text-gray-900 dark:text-white">
-                        Bindisa Agritech Platform
+                        eVISION – Hybrid Learning Platform
                       </h4>
-                      <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">
-                        Full-Stack
+                      <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300">
+                        EdTech
                       </Badge>
                     </div>
 
                     <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                      Leading development of a scalable, multilingual
-                      agriculture-tech platform as Web Development Team Lead,
-                      focusing on innovative solutions for farmers.
+                      An affordable hybrid (online + offline) education platform
+                      for Classes 5–10 & competitive exams (JEE, NEET, MHT-CET,
+                      NDA), supporting English, Hindi, and Marathi languages.
                     </p>
 
                     <div className="space-y-4">
                       <div>
                         <h5 className="font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                          Key Responsibilities:
+                          Key Features:
                         </h5>
                         <ul className="space-y-1 text-sm text-gray-600 dark:text-gray-400">
                           <li className="flex items-start">
-                            <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-2 flex-shrink-0" />
-                            Leading a team of developers
+                            <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0" />
+                            UI designed in Figma with rural usability focus
                           </li>
                           <li className="flex items-start">
-                            <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-2 flex-shrink-0" />
-                            Project management and coordination
+                            <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0" />
+                            Responsive frontend built in React.js
                           </li>
                           <li className="flex items-start">
-                            <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-2 flex-shrink-0" />
-                            Full-stack development architecture
+                            <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0" />
+                            Firebase Auth & Google Drive API integration
                           </li>
                           <li className="flex items-start">
-                            <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-2 flex-shrink-0" />
-                            Scalable platform implementation
+                            <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-2 flex-shrink-0" />
+                            Course-wise routing & material upload system
                           </li>
                         </ul>
                       </div>
 
                       <div className="flex flex-wrap gap-2">
-                        {["React.js", "Node.js", "MongoDB", "Leadership"].map(
-                          (tech) => (
-                            <Badge
-                              key={tech}
-                              variant="outline"
-                              className="text-xs bg-green-50 dark:bg-green-900"
-                            >
-                              {tech}
-                            </Badge>
-                          ),
-                        )}
+                        {[
+                          "React.js",
+                          "Node.js",
+                          "Firebase",
+                          "Figma",
+                          "Google Drive API",
+                        ].map((tech) => (
+                          <Badge
+                            key={tech}
+                            variant="outline"
+                            className="text-xs bg-blue-50 dark:bg-blue-900"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+
+                      <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 pt-2">
+                        <span>📅 Mar 2024 – Jun 2024</span>
+                        <span>👥 Team Size: 4</span>
+                        <span>🚀 Status: Live</span>
                       </div>
                     </div>
                   </div>
