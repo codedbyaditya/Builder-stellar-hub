@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-400 via-sky-500 to-blue-600 dark:from-sky-800 dark:via-sky-900 dark:to-blue-900 animate-gradient-shift" />
+      <div className="absolute inset-0 hero-gradient dark:bg-gradient-to-br dark:from-sky-800 dark:via-sky-900 dark:to-blue-900 animate-gradient-shift" />
 
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
