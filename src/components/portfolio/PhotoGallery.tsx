@@ -97,10 +97,10 @@ const photos: Photo[] = [
   },
   {
     id: 11,
-    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.30.06-am-16b750?format=webp&width=800",
-    title: "Memorable College Moments",
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-22-at-5.41.09-pm-513bb5?format=webp&width=800",
+    title: "College Friends Memory",
     category: "Life",
-    description: "Beautiful memories from college life",
+    description: "Beautiful college memories with friends",
     date: "2024",
   },
   {

@@ -208,6 +208,23 @@ const leadershipData: LeadershipItem[] = [
     image:
       "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.34.48-am-61eb91?format=webp&width=800",
   },
+  {
+    id: 13,
+    title: "Security Head",
+    organization: "Effervescence – IIIT-A Fest",
+    duration: "2024-2025 (3rd Year)",
+    type: "leadership",
+    description:
+      "Leading security operations for one of the largest tech fests in North India, managing crowd control, event safety, and coordination.",
+    achievements: [
+      "Managed security for 10,000+ attendees",
+      "Coordinated with local authorities",
+      "Zero major security incidents",
+      "Led team of 50+ volunteers",
+    ],
+    image:
+      "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.22.44-am-5e1846?format=webp&width=800",
+  },
 ];
 
 const LeadershipSection = () => {
