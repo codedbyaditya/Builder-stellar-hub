@@ -217,8 +217,7 @@ const ContactSection = () => {
                     </p>
                     <Button
                       size="lg"
-                      variant="outline"
-                      className="border-2 border-electric-yellow-400 text-electric-yellow-400 hover:bg-electric-yellow-400 hover:text-deep-blue-900 font-semibold group w-full"
+                      className="bg-white text-deep-blue-600 hover:bg-gray-100 font-semibold group"
                       onClick={() => {
                         const link = document.createElement('a');
                         link.href = 'https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/iec2022026_aditya_deshmukh-ce7aac';
