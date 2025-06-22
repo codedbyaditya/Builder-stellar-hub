@@ -16,7 +16,7 @@ interface Photo {
 
 const photos = [
   {
-    id: 3,
+    id: 1,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.20.44-am-5e1846?format=webp&width=800",
     title: "Aproksha Tech Fest",
     category: "Events",
@@ -24,7 +24,7 @@ const photos = [
     date: "2024",
   },
   {
-    id: 4,
+    id: 2,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.21.58-am-380ad9?format=webp&width=800",
     title: "Asmita Sports Fest",
     category: "Sports",
@@ -32,7 +32,7 @@ const photos = [
     date: "2024",
   },
   {
-    id: 5,
+    id: 3,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.23.03-am-01cc8c?format=webp&width=800",
     title: "Effervescence 2024",
     category: "Cultural",
