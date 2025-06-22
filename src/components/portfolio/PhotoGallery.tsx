@@ -153,7 +153,7 @@ const photos = [
     date: "2024",
   },
   {
-    id: 18,
+    id: 20,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-22-at-5.46.31-pm-875963?format=webp&width=800",
     title: "College Drama Performance",
     category: "Cultural",
