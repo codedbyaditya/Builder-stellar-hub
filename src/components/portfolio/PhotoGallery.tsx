@@ -169,11 +169,11 @@ const photos: Photo[] = [
     date: "2024",
   },
   {
-    id: 20,
-    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.37.01-am-dc7150?format=webp&width=800",
-    title: "Chatrapati Shivaji Maharaj Jayanti",
-    category: "Cultural",
-    description: "Celebrating Chatrapati Shivaji Maharaj Jayanti",
+    id: 18,
+    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-22-at-5.43.14-pm-5194b7?format=webp&width=800",
+    title: "Study Group Session",
+    category: "Life",
+    description: "Academic collaboration and group study sessions with friends",
     date: "2024",
   },
   {
