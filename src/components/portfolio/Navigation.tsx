@@ -13,6 +13,7 @@ import {
   Mail,
   Sun,
   Moon,
+  Download,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 
