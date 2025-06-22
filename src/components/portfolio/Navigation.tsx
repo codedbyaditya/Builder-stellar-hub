@@ -20,7 +20,7 @@ import { useTheme } from "next-themes";
 const Navigation = () => {
   const [hidden, setHidden] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
   const { theme, setTheme } = useTheme();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -229,7 +229,7 @@ const Navigation = () => {
       <motion.div
         className="h-1 bg-gradient-to-r from-deep-blue-600 to-electric-yellow-400 origin-left"
         style={{
-          scaleX: useScroll().scrollYProgress,
+          scaleX: scrollYProgress,
         }}
       />
     </motion.nav>
