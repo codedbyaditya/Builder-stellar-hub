@@ -202,10 +202,11 @@ const Navigation = () => {
                         size="sm"
                         className="bg-electric-yellow-400 text-deep-blue-900 hover:bg-electric-yellow-500 font-semibold group"
                         onClick={() => {
-                          const link = document.createElement('a');
-                          link.href = 'https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/iec2022026_aditya_deshmukh-ce7aac';
-                          link.download = 'Aditya_Deshmukh_Resume.pdf';
-                          link.target = '_blank';
+                          const link = document.createElement("a");
+                          link.href =
+                            "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/iec2022026_aditya_deshmukh-ce7aac";
+                          link.download = "Aditya_Deshmukh_Resume.pdf";
+                          link.target = "_blank";
                           document.body.appendChild(link);
                           link.click();
                           document.body.removeChild(link);
@@ -214,6 +215,7 @@ const Navigation = () => {
                         <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                         Download Resume
                       </Button>
+                    </div>
                   </div>
                 </div>
               </SheetContent>
