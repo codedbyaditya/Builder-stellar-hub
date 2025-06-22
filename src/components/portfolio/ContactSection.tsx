@@ -217,12 +217,21 @@ const ContactSection = () => {
                     </p>
                     <Button
                       size="lg"
-                      className="bg-white text-deep-blue-600 hover:bg-gray-100 font-semibold group"
+                      variant="outline"
+                      className="border-2 border-electric-yellow-400 text-electric-yellow-400 hover:bg-electric-yellow-400 hover:text-deep-blue-900 font-semibold group w-full"
+                      onClick={() => {
+                        const link = document.createElement('a');
+                        link.href = 'https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/iec2022026_aditya_deshmukh-ce7aac';
+                        link.download = 'Aditya_Deshmukh_Resume.pdf';
+                        link.target = '_blank';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      }}
                     >
                       <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                       Download Resume
                     </Button>
-                  </div>
                 </Card>
               </motion.div>
             </motion.div>
