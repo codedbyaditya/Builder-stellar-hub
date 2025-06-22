@@ -25,6 +25,28 @@ const Portfolio = () => {
           {/* Hero Section */}
           <HeroSection />
 
+          {/* 🔍 SEO & Identity Section */}
+          <section className="mt-10 px-4 md:px-8 text-sm text-muted max-w-4xl mx-auto">
+            <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-2">
+              Who is Aditya Deshmukh?
+            </h2>
+            <p className="mb-2">
+              I am Aditya Deshmukh, a B.Tech graduate from IIIT Allahabad, with hands-on experience in modern web development, 
+              AI-based tools, and full-stack projects using React, Node.js, Firebase, and more.
+            </p>
+            <p className="mb-2">
+              I have qualified JEE twice, cleared MHT-CET, and also represented Maharashtra as an NCC Cadet. I participated in 
+              a government-led cybersecurity awareness program and have successfully built impactful platforms like CampusConnect, 
+              GitaGPT, and Bindisa Agritech.
+            </p>
+            <p>
+              People search for me as: <strong>
+              Aditya Deshmukh IIITA, Aditya Deshmukh NIT, Aditya Deshmukh NIT Nagpur, 
+              Aditya Deshmukh NCC Cadet, Aditya Deshmukh Maharashtra, Aditya Deshmukh Adobe, 
+              Aditya Deshmukh Amazon, Aditya Deshmukh Portfolio</strong> — and this is my official portfolio.
+            </p>
+          </section>
+
           {/* About Section */}
           <AboutSection />
 
@@ -158,3 +180,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
