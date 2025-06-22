@@ -219,10 +219,11 @@ const ContactSection = () => {
                       size="lg"
                       className="bg-white text-deep-blue-600 hover:bg-gray-100 font-semibold group"
                       onClick={() => {
-                        const link = document.createElement('a');
-                        link.href = 'https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/iec2022026_aditya_deshmukh-ce7aac';
-                        link.download = 'Aditya_Deshmukh_Resume.pdf';
-                        link.target = '_blank';
+                        const link = document.createElement("a");
+                        link.href =
+                          "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/iec2022026_aditya_deshmukh-ce7aac";
+                        link.download = "Aditya_Deshmukh_Resume.pdf";
+                        link.target = "_blank";
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
@@ -231,6 +232,7 @@ const ContactSection = () => {
                       <Download className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
                       Download Resume
                     </Button>
+                  </div>
                 </Card>
               </motion.div>
             </motion.div>
