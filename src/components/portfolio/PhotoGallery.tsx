@@ -14,23 +14,7 @@ interface Photo {
   date: string;
 }
 
-const photos: Photo[] = [
-  {
-    id: 1,
-    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.18.49-am-f3cd07?format=webp&width=800",
-    title: "NCC Training Group",
-    category: "NCC",
-    description: "Group photo with NCC cadets during training",
-    date: "2023",
-  },
-  {
-    id: 2,
-    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.19.43-am-a0f623?format=webp&width=800",
-    title: "Memorable Moments",
-    category: "Events",
-    description: "Special moments with friends and colleagues",
-    date: "2024",
-  },
+const photos = [
   {
     id: 3,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.20.44-am-5e1846?format=webp&width=800",
