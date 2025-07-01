@@ -152,14 +152,7 @@ const photos = [
       "Special moment with Michel Santner and Daryl Smith at Taj Hotel",
     date: "2024",
   },
-  {
-    id: 20,
-    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-22-at-5.46.31-pm-875963?format=webp&width=800",
-    title: "College Drama Performance",
-    category: "Cultural",
-    description: "Acting and drama performance during college cultural events",
-    date: "2024",
-  },
+
   {
     id: 21,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.00.48-am-4d6fb3?format=webp&width=800",
@@ -230,14 +223,6 @@ const photos = [
     title: "Team Unity",
     category: "Life",
     description: "Coordinated team photo showcasing friendship and unity",
-    date: "2024",
-  },
-  {
-    id: 30,
-    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-5.04.41-am-f1c049?format=webp&width=800",
-    title: "Study Group",
-    category: "Academic",
-    description: "Academic collaboration and group study sessions",
     date: "2024",
   },
 ];
