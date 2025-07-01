@@ -79,14 +79,7 @@ const photos = [
     description: "JEE examination results and achievement",
     date: "2020",
   },
-  {
-    id: 11,
-    src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-22-at-5.41.09-pm-513bb5?format=webp&width=800",
-    title: "College Friends Memory",
-    category: "Life",
-    description: "Beautiful college memories with friends",
-    date: "2024",
-  },
+
   {
     id: 12,
     src: "https://cdn.builder.io/api/v1/assets/91dee6dff05e4edeb389ea8ac7a33180/screenshot-2025-06-21-at-4.31.02-am-55b517?format=webp&width=800",
@@ -600,7 +593,7 @@ const PhotoGallery = () => {
                   whileHover={{ scale: 1.05 }}
                   className="text-center"
                 >
-                  <div className="text-4xl font-bold mb-2">28+</div>
+                  <div className="text-4xl font-bold mb-2">27+</div>
                   <div className="text-sm opacity-90">Total Memories</div>
                 </motion.div>
                 <motion.div
