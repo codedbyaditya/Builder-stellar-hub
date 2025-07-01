@@ -600,7 +600,7 @@ const PhotoGallery = () => {
                   whileHover={{ scale: 1.05 }}
                   className="text-center"
                 >
-                  <div className="text-4xl font-bold mb-2">30+</div>
+                  <div className="text-4xl font-bold mb-2">28+</div>
                   <div className="text-sm opacity-90">Total Memories</div>
                 </motion.div>
                 <motion.div
